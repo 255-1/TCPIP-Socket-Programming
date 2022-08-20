@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    serv_addr.sin_port = htons(atoi(argv[1]));
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY); //host to network (long 4B)
+    serv_addr.sin_port = htons(atoi(argv[1])); // host to network (short 2B)
 
     if(bind(serv_sock, (struct sockaddr*) &serv_addr, sizeof(serv_addr)) == -1)
         error_handling("bind() error");
