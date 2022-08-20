@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = inet_addr(argv[1]);
+    serv_addr.sin_addr.s_addr = inet_addr(argv[1]); //点分十进制转化为32位类型, 还可以检测无效IP地址
     serv_addr.sin_port = htons(atoi(argv[2]));
 
     if(connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) == -1)
