@@ -37,6 +37,8 @@
     "sigaction.h": "c",
     "wait.h": "c",
     "sig_atomic_t.h": "c",
-    "stddef.h": "c"
-  }
+    "stddef.h": "c",
+    "string.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
 }
